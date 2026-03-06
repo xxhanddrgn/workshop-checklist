@@ -1,0 +1,11 @@
+{
+  "name": "workshop-checklist",
+  "version": "1.0.0",
+  "description": "법정의무교육 이수 체크리스트",
+  "scripts": {
+    "start": "npx serve -s . -l $PORT"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

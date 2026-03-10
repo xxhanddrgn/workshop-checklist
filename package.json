@@ -1,11 +1,14 @@
 {
   "name": "workshop-checklist",
-  "version": "1.0.0",
-  "description": "법정의무교육 이수 체크리스트",
+  "version": "2.0.0",
+  "description": "1인 1역 체크리스트 & 법정의무교육 이수 체크리스트",
   "scripts": {
-    "start": "npx serve -s . -l $PORT"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }

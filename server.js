@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Root serves the checklist directly
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'role', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'legal-edu.html'));
 });
 
 // Static files

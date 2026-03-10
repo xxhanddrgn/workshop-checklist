@@ -147,7 +147,7 @@ app.get('/api/summary', (req, res) => {
   res.json(Object.values(summary));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
   // Initialize data file if needed
   if (!fs.existsSync(DATA_FILE)) {

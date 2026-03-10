@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>워크숍 체크리스트</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f0f9ff 0%, #fefce8 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 500px;
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+  .card {
+    display: block;
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 6px solid;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+  .card:active {
+    transform: scale(0.98);
+  }
+  .card-role {
+    border-left-color: #f59e0b;
+  }
+  .card-legal {
+    border-left-color: #4f46e5;
+  }
+  .card .icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .card .title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .card .desc {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>워크숍 체크리스트</h1>
+  <p class="subtitle">사용할 체크리스트를 선택하세요</p>
+
+  <a href="/role/" class="card card-role">
+    <div class="icon">📋</div>
+    <div class="title">1인 1역 체크리스트</div>
+    <div class="desc">학생들이 매일 맡은 역할을 체크하고, 교사가 점검할 수 있는 페이지입니다.</div>
+  </a>
+
+  <a href="/legal-edu.html" class="card card-legal">
+    <div class="icon">📚</div>
+    <div class="title">법정의무교육 이수 체크리스트</div>
+    <div class="desc">교직원 대상 법정의무교육 이수 현황을 관리하는 체크리스트입니다.</div>
+  </a>
+</div>
+</body>
+</html>

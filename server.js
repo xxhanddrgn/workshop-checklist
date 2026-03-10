@@ -7,6 +7,16 @@ const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data.json');
 
 app.use(express.json());
+
+// Home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'home.html'));
+});
+
+// 1인 1역 pages under /role/
+app.use('/role', express.static(path.join(__dirname, 'public', 'role')));
+
+// Static files (legal-edu, home, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Initialize data file

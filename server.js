@@ -90,7 +90,7 @@ app.post('/api/checks', (req, res) => {
   if (checked) {
     data.checks[date][key] = {
       checked: true,
-      time: new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' })
+      time: new Date().toLocaleTimeString('ko-KR', { timeZone: 'Asia/Seoul', hour: '2-digit', minute: '2-digit' })
     };
   } else {
     delete data.checks[date][key];
@@ -107,7 +107,7 @@ app.post('/api/approve', (req, res) => {
   const key = `${roleId}_${student}`;
   if (data.checks[date][key]) {
     data.checks[date][key].approved = approved;
-    data.checks[date][key].approveTime = new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
+    data.checks[date][key].approveTime = new Date().toLocaleTimeString('ko-KR', { timeZone: 'Asia/Seoul', hour: '2-digit', minute: '2-digit' });
   }
   saveData(data);
   res.json({ success: true });
